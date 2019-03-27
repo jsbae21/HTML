@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> HTML 실습 </title>
+    <script type="text/javascript">
+      function rect(){
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+
+        ctx.beginPath();
+        ctx.moveTo(10,50);
+        ctx.lineTo(200,350);
+        ctx.lineWidth = 5;
+        ctx.strokeStyle = 'red'; //선색 지정
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(100,50);
+        ctx.lineTo(300,350);
+        ctx.lineTo(300,100);
+        ctx.lineWidth = 10;
+        ctx.strokeStyle = 'blue'; //선색 지정
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.moveTo(300,50);
+        ctx.lineTo(500,350);
+        ctx.lineTo(500,100);
+        ctx.moveTo(550,50);
+        ctx.lineTo(550,350);
+        ctx.lineWidth = 25;
+        ctx.strokeStyle = 'green'; //선색 지정
+        ctx.lineCap = 'round';
+        ctx.lineJoin = 'miter'; //miter(뾰족),
+        ctx.stroke();
+      }
+    </script>
+  </head>
+  <body onload="rect();">
+    <canvas id="canvas" width="600" height="400">canvas 사용하기</canvas>
+  </body>
+</html>
