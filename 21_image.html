@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Image </title>
+    <script type="text/javascript">
+      function rect(){
+        var canvas = document.getElementById('canvas');
+        var ctx = canvas.getContext('2d');
+        var honey = document.getElementById('img_source');
+        ctx.drawImage(honey,10,10,200,200);
+      }
+    </script>
+  </head>
+  <body onload="rect();">
+    <canvas id="canvas" width="500" height="400" style="border:solid 1px #000000">
+      canvas 사용하기
+      <img id="img_source" src="black.png">
+      </canvas>
+  </body>
+</html>

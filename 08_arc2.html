@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 캔버스1 </title>
+    <script type="text/javascript">
+    function rect(){
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+
+      ctx.beginPath();
+      ctx.arc(120,120,100,0,360*Math.PI/180,false);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(350,120,100,90*Math.PI/180,360*Math.PI/180,false);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.arc(350,120,100,90*Math.PI/180,360*Math.PI/180,true);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.moveTo(570,120);
+      ctx.arc(570,120,100,90*Math.PI/180,360*Math.PI/180,false);
+      ctx.closePath();
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(570,120);
+      ctx.arc(570,120,100,90*Math.PI/180,360*Math.PI/180,true);
+      ctx.closePath();
+      ctx.fill();
+    }
+    </script>
+  </head>
+  <body onload="rect();">
+    <canvas id="canvas" width="800" height="400" style ="border:1px solid #d3d3d3;">
+  </body>
+</html>
+
+
+<!-- arc() x,y,반지름,시작각도,종료각도,그리는 방향 -->
+<!--시작 각도와 종료 각도의 단위는 degree가 아닌 radian 사용 -->

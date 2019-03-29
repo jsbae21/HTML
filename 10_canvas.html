@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 캔버스 </title>
+    <script type="text/javascript">
+    function rect()
+    {
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      context.strokeRect(20,20,100,100);
+      context.fillRect(120,120,100,100);
+      context.clearRect(70,70,100,100);
+    }
+    </script>
+  </head>
+  <body onload="rect();">
+    <canvas id="canvas" width="500" height="400">
+    canvas 사용하기</canvas>
+  </body>
+</html>
+
+<!-- #000000 Red yellow blue 색상 -->
+<!-- context.strokeRecr(x,y,너비,높이); 테두리만 있는 사각형을 그림 -->
+<!-- context.fillRect(x,y,너비,높이); 색이 채워진 사각형을 그림 -->
+<!-- context.clearRect(x,y,너비,높이); 특정영역을 지움 -->

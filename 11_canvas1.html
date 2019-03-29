@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 캔버스1 </title>
+    <script type="text/javascript">
+    function rect()
+    {
+      var canvas = document.getElementById('canvas');
+      var context = canvas.getContext('2d');
+      context.strokeRect(10,10,200,200);
+      context.fillRect(220,10,200,200);
+      context.fillRect(430,10,200,200);
+      context.clearRect(500,50,100,100);
+    }
+    </script>
+  </head>
+  <body onload="rect();">
+    <canvas id="canvas" width="700" height="400"
+    style="border:solid 1px #000000">
+    canvas 사용하기</canvas>
+  </body>
+</html>

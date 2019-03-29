@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 캔버스1 </title>
+    <script type="text/javascript">
+    function rect(){
+      var canvas = document.getElementById('canvas');
+      var ctx = canvas.getContext('2d');
+
+      ctx.beginPath();
+      ctx.moveTo(50,50);
+      ctx.arcTo(200,400,300,10,50);
+      ctx.stroke();
+
+      ctx.beginPath();
+      ctx.moveTo(600,350);
+      ctx.arcTo(400,0,300,400,100);
+      ctx.fill();
+    }
+    </script>
+  </head>
+  <body onload="rect();">
+    <canvas id="canvas" width="800" height="400" style ="border:1px solid #d3d3d3;">
+  </body>
+</html>
+
+<!-- arcTo() 보조점x, 보조점y, 종료점x, 종료점y, 반지금 -->
