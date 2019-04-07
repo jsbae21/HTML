@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> audio </title>
+  </head>
+  <body>
+    <video id="videoplay" src="D:\HTML\video.mp4" controls width="500" height="300">
+      <embed src="D:\HTML\video.mp4"></embed>
+    </video><br>
+    <!-- 재생 버튼 생성 -->
+    <input type="button" value="재생" onclick="play();">
+    <script type="text/javascript">
+    var videocontrol = document.getElementById("videoplay");
+      function play()
+      {
+        //현재 미디어 파일이 정지 상태인지의 여부 반환
+        if(videocontrol.paused)
+         videocontrol.play();
+        else{videocontrol.pause();
+         alert("현재 일시 중지 상태입니다.");}
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> audio </title>
+  </head>
+  <body>
+    <video id="videoplay" src="D:\HTML\video.mp4" controls width="500" height="300">
+      <embed src="D:\HTML\video.mp4"></embed>
+    </video><br>
+    <div id="playtime"></div>
+    <script type="text/javascript">
+      var videocontrol = document.getElementById("videoplay");
+      videocontrol.addEventListener("timeupdate", Playtime, false);
+      videocontrol.addEventListener("ended", PlayEnd, false);
+
+      function Playtime(e)
+      {
+        document.getElementById("playtime").innerHTML =
+         "재생 상태 : " + Math.floor(videocontrol.currentTime)+
+         "/" + Math.floor(videocontrol.duration);
+      }
+
+      function PlayEnd(e)
+      {
+        alert("미디어 재생이 완료되었습니다.");
+      }
+    </script>
+  </body>
+</html>

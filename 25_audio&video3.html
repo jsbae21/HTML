@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> audio </title>
+  </head>
+  <body>
+    <video id="videoplay" src="D:\HTML\video.mp4" controls width="500" height="300">
+      <embed src="D:\HTML\video.mp4"></embed>
+    </video><br>
+    <!-- 재생 버튼 생성 -->
+    <input type="button" value="재생/일시정지" onclick="play();">
+    <input type="button" value="큰화면" onclick="big();">
+    <input type="button" value="작은화면" onclick="small();">
+    <script type="text/javascript">
+      var videocontrol = document.getElementById("videoplay");
+      function play()
+      {
+        if(videocontrol.paused)
+         videocontrol.play();
+        else
+         videocontrol.pause();
+       }
+       function big()
+       {
+         videocontrol.width +=200;
+         videocontrol.height +=200;
+       }
+       function small()
+       {
+         videocontrol.width -=200;
+         videocontrol.height -=200;
+       }
+
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> audio </title>
+  </head>
+  <body>
+    <video id="videoplay" src="D:\HTML\video.mp4" controls width="500" height="300">
+      <embed src="D:\HTML\video.mp4"></embed>
+    </video><br>
+    <!-- 재생 버튼 생성 -->
+    <input type="button" value="재생" onclick="play();">
+    <script type="text/javascript">
+      function play()
+      {
+        //객체 생성
+        var videocontrol = document.getElementById("videoplay");
+        //미디어 파일 재생
+        videocontrol.play();
+      }
+    </script>
+  </body>
+</html>
