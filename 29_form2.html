@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> form </title>
+  </head>
+  <body>
+    <form oninput="ret.value=parseInt(a.value)">
+      <table>
+        <tr>
+          <td>이름</td>
+          <td><input type="text" name="name"
+            placeholder="이름 입력하세요" autofocus required></td>
+        </tr>
+        <tr>
+          <td>전화번호</td>
+          <td><input type="text" name="phone"
+            pattern="\d{2,3}-\d{3,4}-\d{4}$"
+            placeholder="전화번호를 입력하시오" required></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td><input type="email" name="email"
+            placeholder="이메일을 입력하시오" autocomplete="off"></td>
+        </tr>
+        <tr>
+          <td>홈페이지</td>
+          <td><input type="url" name="homepage"
+            placeholder="홈페이지 주소를 입력하시오"></td>
+        </tr>
+        <tr>
+          <td>생년월일</td>
+          <td><input type="date" name="birthday" required></td>
+        </tr>
+        <tr>
+          <td>졸업년도</td>
+          <td><input type="number" name="graduate" min="1990" max="2020"></td>
+        </tr>
+        <tr>
+          <td>영어 등급</td>
+          <td><input type="range" id="a" name="level" min="1" max="10" value="5"
+              <output name="ret" for="a"></output>
+            </td>
+        </tr>
+        <tr>
+          <td>좋아하는 TV</td>
+          <td>
+            <input type="text" name="" list="site" placeholder="TV프로그램을 선택하시오">
+              <datalist id="site">
+                <option value="무한도전">
+                <option value="런닝맨">
+                <option value="어서와 한국은 처음이지">
+              </datalist></td>
+        </tr>
+        <tr>
+          <td><input type="submit"></td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+<!-- placeholder : 짧은 힌트를 지정
+    autofocus : 자동 포커싱 지정
+    autocomplete : 자동 완성 지정 => 다른 페이지 갔다돌아와도 삭제되지 않음
+    required : 필수 입력 지정
+    pattern : 지정한 정규 표현식에 대한 유효성 검사
+    정규 표현식 : www.w3schools.com/jsref/jsref_obj_regexp.asp-->

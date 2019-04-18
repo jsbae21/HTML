@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> Input </title>
+  </head>
+  <body>
+    <form oninput="ret value=parseInt(a.value)">
+      <table>
+        <tr>
+          <td>이름</td>
+          <td><input type="text" name="name"></td>
+        </tr>
+        <tr>
+          <td>이메일</td>
+          <td><input type="email" name="email" value=""></td>
+        </tr>
+        <tr>
+          <td>홈페이지</td>
+          <td><input type="url" name="url"></td>
+        </tr>
+        <tr>
+          <td>생년월일</td>
+          <td><input type="date" name="birthday"></td>
+        </tr>
+        <tr>
+          <td>졸업 년도</td>
+          <td><input type="number" name="graduate" min="1990" max="2030"></td>
+        </tr>
+        <tr>
+          <td>영어 등급</td>
+          <td><input type="range" min="1" max="10" value="5"></td>
+        </tr>
+        <tr>
+          <td>좋아하는 색</td>
+          <td><input type="color" name="color"></td>
+        </tr>
+        <tr>
+          <td>좋아하는 TV</td>
+          <td>
+            <input type="text" name="" list="site">
+              <datalist id="site">
+                <option value="무한도전">
+                <option value="런닝맨">
+                <option value="어서와 한국은 처음이지">
+              </datalist></td>
+        </tr>
+        <tr>
+          <td>
+            <keygen name="key">
+            <input type="submit">
+          </td>
+        </tr>
+      </table>
+    </form>
+  </body>
+</html>
+<!-- input 요소는 form 태그 안에 써야함 -->
+<!-- input 타입 속성값 www.w3schools.com/tags/att_input_type.asp-->
