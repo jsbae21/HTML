@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title> 6주차 과제 </title>
+  </head>
+  <body>
+    <video id="videoplay" src="D:\CinemaParadiso.mp4" controls width="700" height="400">
+      <embed src="D:\CinemaParadiso.mp4"></embed>
+    </video><br>
+    <div id="playtime"></div>
+    <input type="button" value="화면축소" onclick="scaledown();">
+    <input type="button" value="기본화면" onclick="normal();">
+    <input type="button" value="화면확대" onclick="scaleup();">
+    <input type="button" value="재생/일시정지" onclick="play();">
+    <input type="button" value="음소거" onclick="mute();">
+    볼륨 : <input type="range" id="vol" min="0" max="100" value="50";>
+    <script type="text/javascript">
+      var videocontrol = document.getElementById("videoplay");
+      videocontrol.addEventListener("timeupdate", volumecontrol, false)
+      videocontrol.addEventListener("timeupdate", Playtime, false);
+      function scaledown(){
+        videocontrol.width -=100;
+        videocontrol.height -=100;
+      }
+      function normal(){
+        videocontrol.width = 700;
+        videocontrol.height = 400;
+      }
+      function scaleup(){
+        videocontrol.width +=100;
+        videocontrol.height +=100;
+      }
+      function play(){
+        if(videocontrol.paused)
+         videocontrol.play();
+        else
+         videocontrol.pause();
+       }
+      function mute(){
+        if (videocontrol.muted)
+         videocontrol.muted=false;
+        else
+         videocontrol.muted=true;
+       }
+      function volumecontrol(e){
+       videocontrol.volume = vol.value/100;
+       }
+      function Playtime(e){
+        document.getElementById("playtime").innerHTML =
+         "재생 상태 : " + Math.floor(videocontrol.currentTime)+
+         "/" + Math.floor(videocontrol.duration);
+      }
+    </script>
+  </body>
+</html>

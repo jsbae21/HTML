@@ -1,0 +1,17 @@
+font {font-size: 10pt;
+    font-family: 굴림체;
+    font-weight: bold;
+    color: blue;}
+.font1 {font-size: 20pt;
+     font-family: 궁서체;
+     font-weight: bold;
+     letter-spacing: 10pt;
+     text-align: center;}
+.font2 {font-size: 15pt;
+      font-family: 돋움체;
+      font-weight: bold;}
+.font3 {font-weight: bold; 
+      font-size: 30pt;
+      text-shadow: 5px 5px 5px blue}
+.text {line-height: 400%;
+     text-indent: 50pt;} 
