@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+            @keyframes myAnimation
+            {
+                0% {width: 100px; left: 0px; background: orange;}
+                30% {width: 100px; left: 50px; background: green;}
+                50% {width: 100px; left: 100px; background: blue;}
+                80% {width: 100px; left: 150px; background: green;}
+                100% {width: 100px; left: 200px; background: blue;}
+                /*from{width: 100px; background: orange;}
+                to{width: 200px; background: blue;}*/
+            }
+
+            div {
+                width: 100px; height: 100px;
+                position: relative;
+                background: orange;
+                animation-name: myAnimation;
+                animation-duration: 2s;
+                animation-timing-function: ease-out;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                /*한번에 지정
+                animation: name값 duration값 timing-function값 delay값 interation-count값
+                           direction값 fill-mode값 play-state값*/
+            }
+        </style>
+    </head>
+    <body>
+        <div>Animation 속성</div>        
+    </body>
+</html>

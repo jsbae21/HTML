@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        /*최초 상태 및 트랜지션 속성 지정 */
+        div {
+            width: 150px; height: 100px;
+            position: relative; left: 10px;
+            background: blue;
+            transition-property: width, left, color;
+            transition-duration: 2s, 2s, 2s;
+            transition-timing-function: ease-in, linear, ease-in-out;
+            transition-delay: 0s, 1s, 1s}
+            /* 한번에 작성 가능 :  -webkit-transition: width 2s ease-in 1s;*/
+
+        /*이벤트 및 최종 상태 지정*/
+        div:hover{width: 300px; left: 300px; background: red;}
+        </style>
+    </head>
+    <body>
+        <div>transition 속성</div>
+    </body>
+</html>
