@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>웹 스토리지</title>
+        <script type="text/javascript">
+        window.onload = function()
+        {
+            if(window.localStorage)
+            {
+                localStorage.setItem("computer", "programming");
+                var value = localStorage.getItem("computer");
+                alert(value);
+            }
+        }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

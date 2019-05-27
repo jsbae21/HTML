@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>웹 스토리지</title>
+        <script type="text/javascript">
+        window.onload = function()
+        {
+            var db = openDatabase("movie", "1.0", "movie database", 1024*1024);
+            db.transaction(
+                function(tx)
+                {
+                    //tb 생성
+                    tx.executeSql("create table movie(name, actor)");
+                    //data 삽입
+                    tx.executeSql("insert into movie(name, actor) values(?, ?)",
+                    ["타이타닉", "디카프리오"]);
+                    tx.executeSql("insert into movie(name, actor) values(?, ?)",
+                    ["아바타", "샘 워싱턴"]);
+                    tx.executeSql("insert into movie(name, actor) values(?, ?)",
+                    ["반지의 제왕", "일라이저 우드"]);
+                });  
+        }
+        </script>
+    </head>
+    <body>
+    </body>
+</html> 

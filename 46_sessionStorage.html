@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>웹 스토리지</title>
+        <script type="text/javascript">
+        window.onload = function()
+        {
+            var count = sessionStorage.getItem("counter")
+            if (count == null)
+            {
+                sessionStorage.setItem("counter", 1);
+                alert("처음 방문해 주셨습니다.");
+            }
+            else
+            {
+                alert(count + "번째 방문해 주셨습니다");
+                count++;
+                sessionStorage.setItem("counter", count);
+            }
+        }
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

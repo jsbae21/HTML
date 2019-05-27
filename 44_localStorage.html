@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>웹 스토리지</title>
+        <script type="text/javascript">
+        function setData()
+        {
+            var key = document.getElementById("key");
+            var data = document.getElementById("data");
+
+            localStorage.setItem(key.value, data.value);
+            alert("데이터 저장이 완료되었습니다");
+        }
+
+        function getData()
+        {
+            var key = document.getElementById("key");
+            var data = localStorage.getItem(key.value);
+            alert("조회한 데이터 값은" + data + "입니다");
+        }
+
+        function removeData()
+        {
+            localStorage.clear();
+            alert("모든 데이터를 삭제했습니다.")
+        }
+
+        function viewData()
+        {
+            var data = document.getElementById("result");
+            data.value = "";
+            for(var i = 0; i < localStorage.length; i++)
+            {
+                var key = localStorage.key(i);
+                data.value += localStorage[key] + ",";
+            }
+        }
+        </script>
+    </head>
+    <body>
+        키 : <input type="text" id="key"> <br>
+        값 : <input type="text" id="data"> <br><br>
+        <input type="button" onclick="setData()" value="저장">
+        <input type="button" onclick="getData()" value="조회">
+        <input type="button" onclick="removeData()" value="모두삭제">
+        <hr>
+        <input type="button" onclick="viewData()" value="모두 보기"><br>
+        <textarea id="result" cols="30" rows="5"></textarea>
+    </body>
+</html>

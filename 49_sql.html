@@ -1,0 +1,52 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> 웹 데이터베이스 </title>
+        <script type="text/JavaScript">
+         var db;
+         window.onload = function()
+         {
+            db = openDatabase("movie", "1.0", "movie database", 1024*1024);  
+            db.transaction(exeCreate);
+            }
+            function exeCreate(tx)
+            {
+                tx.executeSql("create table movie(name, actor)");
+                } 
+                function insertData()
+                {
+                    db.transaction(exeInsert);
+                    }
+                    function exeInsert(tx)
+                    {
+                        tx.executeSql("insert into movie values(?,?)", [movie.value,actor.value]);
+                        } 
+    
+    function viewData()
+    {
+         db.transaction(exeSelect);
+         }
+         function exeSelect(tx)
+         {
+             tx.executeSql("select * from movie", [], viewTabe);
+             }
+             function viewTabe(tx, rs)
+            {
+                for(var i = 0; i < rs.rows.length; i++)
+            {
+                var row = rs.rows.item(i);
+                document.getElementById("table").innerHTML += "<tr><td>" + row["name"] + "</td><td>" + row["actor"] + "</td></tr>";
+                }
+                }
+                </script>
+                </head>
+                <body>
+                    movie: <input type="text" id="movie"><br>
+                    actor: <input type="text" id="actor"><br>
+                    <input type="button" onclick="insertData()" value="저장">
+                    <input type="button" onclick="viewData()" value="조회"><br>
+                    <hr> 
+                    <table id="table"></table>
+                </body>
+                </html> 
